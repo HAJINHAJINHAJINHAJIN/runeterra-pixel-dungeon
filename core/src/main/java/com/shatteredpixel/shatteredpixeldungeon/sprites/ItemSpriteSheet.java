@@ -357,7 +357,7 @@ public class ItemSpriteSheet {
 		assignItemRect(ARMOR_LEATHER,   14, 13);
 		assignItemRect(ARMOR_MAIL,      14, 12);
 		assignItemRect(ARMOR_SCALE,     14, 11);
-		assignItemRect(ARMOR_PLATE,     12, 12);
+		assignItemRect(ARMOR_PLATE,     16, 14);
 		assignItemRect(ARMOR_WARRIOR,   12, 12);
 		assignItemRect(ARMOR_MAGE,      15, 15);
 		assignItemRect(ARMOR_ROGUE,     14, 12);
