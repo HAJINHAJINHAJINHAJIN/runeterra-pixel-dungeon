@@ -24,16 +24,21 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class WornShortsword extends MeleeWeapon {
+public class Serrateddirk extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.WORN_SHORTSWORD;
+		image = ItemSpriteSheet.SERRATED_DIRK;
 		hitSound = Assets.Sounds.HIT_SLASH;
-		hitSoundPitch = 1.1f;
+		hitSoundPitch = 1f;
 
-		tier = 1;
-		
-		bones = false;
+		tier = 2;
+		ACC = 1.32f; //32% boost to accuracy
+	}
+
+	@Override
+	public int max(int lvl) {
+		return  4*(tier+1) +    //12 base, down from 15
+				lvl*(tier+1);   //scaling unchanged
 	}
 
 }

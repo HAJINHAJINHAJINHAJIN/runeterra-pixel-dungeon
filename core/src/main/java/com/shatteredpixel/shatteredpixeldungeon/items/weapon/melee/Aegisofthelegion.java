@@ -22,23 +22,37 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Mace extends MeleeWeapon {
+public class Aegisofthelegion extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.MACE;
-		hitSound = Assets.Sounds.HIT_CRUSH;
+		image = ItemSpriteSheet.AEGIS_OF_THE_LEGION;
+		hitSound = Assets.Sounds.HIT;
 		hitSoundPitch = 1f;
 
 		tier = 3;
-		ACC = 1.28f; //28% boost to accuracy
 	}
 
 	@Override
 	public int max(int lvl) {
-		return  4*(tier+1) +    //16 base, down from 20
-				lvl*(tier+1);   //scaling unchanged
+		return  Math.round(2.5f*(tier+1)) +     //10 base, down from 20
+				lvl*(tier-1);                   //+2 per level, down from +4
 	}
 
+
+	@Override
+	public int defenseFactor( Char owner ) {
+		return 4+2*buffedLvl();     //4 extra defence, plus 2 per level;
+	}
+	
+	public String statsInfo(){
+		if (isIdentified()){
+			return Messages.get(this, "stats_desc", 4+2*buffedLvl());
+		} else {
+			return Messages.get(this, "typical_stats_desc", 4);
+		}
+	}
 }

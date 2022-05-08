@@ -24,14 +24,21 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Sword extends MeleeWeapon {
-	
+public class Phage extends MeleeWeapon {
+
 	{
-		image = ItemSpriteSheet.SWORD;
+		image = ItemSpriteSheet.PHAGE;
 		hitSound = Assets.Sounds.HIT_SLASH;
-		hitSoundPitch = 1f;
+		hitSoundPitch = 1.2f;
 
 		tier = 3;
+		DLY = 0.8f; //1.25x speed
+	}
+
+	@Override
+	public int max(int lvl) {
+		return  4*(tier+1) +    //16 base, down from 20
+				lvl*(tier+1);   //scaling unchanged
 	}
 
 }

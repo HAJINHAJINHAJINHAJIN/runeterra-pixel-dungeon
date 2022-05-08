@@ -24,21 +24,21 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Sai extends MeleeWeapon {
+public class Guinsoosrageblade extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.SAI;
-		hitSound = Assets.Sounds.HIT_STAB;
-		hitSoundPitch = 1.3f;
+		image = ItemSpriteSheet.GUINSOOS_RAGEBLADE;
+		hitSound = Assets.Sounds.HIT_CRUSH;
+		hitSoundPitch = 0.8f;
 
-		tier = 3;
-		DLY = 0.5f; //2x speed
+		tier = 4;
+		ACC = 0.8f; //0.8x accuracy
+		//also cannot surprise attack, see Hero.canSurpriseAttack
 	}
 
 	@Override
 	public int max(int lvl) {
-		return  Math.round(2.5f*(tier+1)) +     //10 base, down from 20
-				lvl*Math.round(0.5f*(tier+1));  //+2 per level, down from +4
+		return  Math.round(7*(tier+1)) +        //35 base, up from 25
+				lvl*Math.round(1.6f*(tier+1));  //+8 per level, up from +5
 	}
-
 }

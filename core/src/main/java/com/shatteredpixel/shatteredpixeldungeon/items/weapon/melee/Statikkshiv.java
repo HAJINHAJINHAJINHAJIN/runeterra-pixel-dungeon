@@ -22,37 +22,23 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
-import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class RoundShield extends MeleeWeapon {
+public class Statikkshiv extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.ROUND_SHIELD;
-		hitSound = Assets.Sounds.HIT;
-		hitSoundPitch = 1f;
+		image = ItemSpriteSheet.STATIKK_SHIV;
+		hitSound = Assets.Sounds.HIT_SLASH;
+		hitSoundPitch = 0.9f;
 
-		tier = 3;
+		tier = 4;
+		ACC = 1.24f; //24% boost to accuracy
 	}
 
 	@Override
 	public int max(int lvl) {
-		return  Math.round(2.5f*(tier+1)) +     //10 base, down from 20
-				lvl*(tier-1);                   //+2 per level, down from +4
+		return  4*(tier+1) +    //20 base, down from 25
+				lvl*(tier+1);   //scaling unchanged
 	}
 
-
-	@Override
-	public int defenseFactor( Char owner ) {
-		return 4+2*buffedLvl();     //4 extra defence, plus 2 per level;
-	}
-	
-	public String statsInfo(){
-		if (isIdentified()){
-			return Messages.get(this, "stats_desc", 4+2*buffedLvl());
-		} else {
-			return Messages.get(this, "typical_stats_desc", 4);
-		}
-	}
 }

@@ -24,25 +24,14 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Greataxe extends MeleeWeapon {
-
+public class BFsword extends MeleeWeapon {
+	
 	{
-		image = ItemSpriteSheet.GREATAXE;
+		image = ItemSpriteSheet.BFSWORD;
 		hitSound = Assets.Sounds.HIT_SLASH;
 		hitSoundPitch = 1f;
 
-		tier = 5;
-	}
-
-	@Override
-	public int max(int lvl) {
-		return  5*(tier+4) +    //45 base, up from 30
-				lvl*(tier+1);   //scaling unchanged
-	}
-
-	@Override
-	public int STRReq(int lvl) {
-		return STRReq(tier+1, lvl); //20 base strength req, up from 18
+		tier = 3;
 	}
 
 }

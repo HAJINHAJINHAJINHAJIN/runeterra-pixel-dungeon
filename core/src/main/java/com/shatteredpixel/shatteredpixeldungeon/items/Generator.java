@@ -110,34 +110,32 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfPrismaticLight
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfRegrowth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.AssassinsBlade;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BattleAxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Manamune;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Statikkshiv;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Crossbow;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dirk;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Brawlersgloves;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Kircheisshard;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Guinsoosrageblade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gauntlet;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Gloves;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greataxe;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatshield;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greatsword;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.HandAxe;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Mace;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Bladeoftheruinedking;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Muramana;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Randuinsomen;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Duskbladeofdraktharr;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Serrateddirk;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Youmusghostblade;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MagesStaff;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.MeleeWeapon;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Quarterstaff;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RoundShield;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sai;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Scimitar;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Shortsword;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Spear;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Sword;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WarHammer;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Rageknife;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Aegisofthelegion;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Blackcleaver;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Zeal;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Phage;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Pickaxe1;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Vampiricscepter;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.BFsword;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Bloodthirster;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Whip;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.WornShortsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.Bolas;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.FishingSpear;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.missiles.ForceCube;
@@ -331,48 +329,48 @@ public class Generator {
 			WEAPON.probs = new float[]{};
 			
 			WEP_T1.classes = new Class<?>[]{
-					WornShortsword.class,
-					Gloves.class,
+					Longsword.class,
 					Dagger.class,
+					Brawlersgloves.class,
 					MagesStaff.class
 			};
 			WEP_T1.probs = new float[]{ 1, 1, 1, 0 };
 			
 			WEP_T2.classes = new Class<?>[]{
-					Shortsword.class,
-					HandAxe.class,
-					Spear.class,
-					Quarterstaff.class,
-					Dirk.class
+					Pickaxe1.class,
+					Serrateddirk.class,
+					Vampiricscepter.class,
+					Rageknife.class,
+					Kircheisshard.class
 			};
 			WEP_T2.probs = new float[]{ 6, 5, 5, 4, 4 };
 			
 			WEP_T3.classes = new Class<?>[]{
-					Sword.class,
+					BFsword.class,
 					Mace.class,
-					Scimitar.class,
-					RoundShield.class,
-					Sai.class,
+					Phage.class,
+					Aegisofthelegion.class,
+					Zeal.class,
 					Whip.class
 			};
 			WEP_T3.probs = new float[]{ 6, 5, 5, 4, 4, 4 };
 			
 			WEP_T4.classes = new Class<?>[]{
-					Longsword.class,
-					BattleAxe.class,
-					Flail.class,
-					RunicBlade.class,
-					AssassinsBlade.class,
+					Youmusghostblade.class,
+					Statikkshiv.class,
+					Guinsoosrageblade.class,
+					Blackcleaver.class,
+					Manamune.class,
 					Crossbow.class
 			};
 			WEP_T4.probs = new float[]{ 6, 5, 5, 4, 4, 4 };
 			
 			WEP_T5.classes = new Class<?>[]{
-					Greatsword.class,
-					WarHammer.class,
-					Glaive.class,
-					Greataxe.class,
-					Greatshield.class,
+					Duskbladeofdraktharr.class,
+					Bloodthirster.class,
+					Bladeoftheruinedking.class,
+					Muramana.class,
+					Randuinsomen.class,
 					Gauntlet.class
 			};
 			WEP_T5.probs = new float[]{ 6, 5, 5, 4, 4, 4 };

@@ -47,9 +47,9 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorrosion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfCorruption;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.curses.Wayward;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.enchantments.Lucky;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Dagger;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Greataxe;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Brawlersgloves;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Guinsoosrageblade;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Muramana;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.ChangesScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.CharSprite;
@@ -647,14 +647,14 @@ public class v0_6_X_Changes {
 				"_-_ Cloak levelling progression changed, it is now much more dependant on hero level\n\n" +
 				"These changes should let the rogue go invisible more often, and with more flexibility."));
 		
-		changes.addButton( new ChangeButton(new Dagger(),
+		changes.addButton( new ChangeButton(new Brawlersgloves(),
 				"As part of the rogue rework, sneak attack weapons have been buffed:\n\n" +
 				"_-_ Dagger sneak attack minimum damage increased to 75% from 50%.\n" +
 				"_-_ Dirk sneak attack minimum damage increased to 67% from 50%\n" +
 				"_-_ Assassin's blade sneak attack minimum damage unchanged at 50%\n\n" +
 				"This change should hopefully give the rogue some needed earlygame help, and give him a more clear choice as to what item he should upgrade, if no items were found in the dungeon."));
 		
-		changes.addButton( new ChangeButton(new Flail(),
+		changes.addButton( new ChangeButton(new Guinsoosrageblade(),
 				"The flail's downsides were too harsh, so one of them has been changed both to make its weaknesses more centralized and to hopefully increase its power.\n\n" +
 				"_-_ Flail no longer attacks at 0.8x speed, instead it has 20% reduced accuracy."));
 		
@@ -887,7 +887,7 @@ public class v0_6_X_Changes {
 				"_-_ Meat and small rations are 50% more filling\n" +
 				"_-_ Pasties and blandfruit are 12.5% more filling"));
 		
-		changes.addButton( new ChangeButton(new ItemSprite(new Greataxe()), "Tier-5 Weapon Buffs",
+		changes.addButton( new ChangeButton(new ItemSprite(new Muramana()), "Tier-5 Weapon Buffs",
 				"_-_ Greataxe base damage increased by ~22%\n" +
 				"_-_ Greatshield base damage increased by ~17%"));
 		

@@ -22,23 +22,27 @@
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Scimitar extends MeleeWeapon {
+public class Rageknife extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.SCIMITAR;
-		hitSound = Assets.Sounds.HIT_SLASH;
-		hitSoundPitch = 1.2f;
+		image = ItemSpriteSheet.RAGEKNIFE;
+		hitSound = Assets.Sounds.HIT_CRUSH;
+		hitSoundPitch = 1f;
 
-		tier = 3;
-		DLY = 0.8f; //1.25x speed
+		tier = 2;
 	}
 
 	@Override
 	public int max(int lvl) {
-		return  4*(tier+1) +    //16 base, down from 20
+		return  4*(tier+1) +    //12 base, down from 15
 				lvl*(tier+1);   //scaling unchanged
 	}
 
+	@Override
+	public int defenseFactor( Char owner ) {
+		return 2;	//2 extra defence
+	}
 }

@@ -24,21 +24,21 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Flail extends MeleeWeapon {
+public class Ironspikewhip extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.FLAIL;
+		image = ItemSpriteSheet.IRONSPIKE_WHIP;
 		hitSound = Assets.Sounds.HIT_CRUSH;
-		hitSoundPitch = 0.8f;
+		hitSoundPitch = 1f;
 
-		tier = 4;
-		ACC = 0.8f; //0.8x accuracy
-		//also cannot surprise attack, see Hero.canSurpriseAttack
+		tier = 3;
+		ACC = 1.28f; //28% boost to accuracy
 	}
 
 	@Override
 	public int max(int lvl) {
-		return  Math.round(7*(tier+1)) +        //35 base, up from 25
-				lvl*Math.round(1.6f*(tier+1));  //+8 per level, up from +5
+		return  4*(tier+1) +    //16 base, down from 20
+				lvl*(tier+1);   //scaling unchanged
 	}
+
 }

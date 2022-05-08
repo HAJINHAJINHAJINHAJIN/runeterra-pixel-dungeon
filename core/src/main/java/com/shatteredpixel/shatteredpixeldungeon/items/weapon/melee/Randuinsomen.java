@@ -21,24 +21,34 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
-import com.shatteredpixel.shatteredpixeldungeon.Assets;
+import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class WarHammer extends MeleeWeapon {
+public class Randuinsomen extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.WAR_HAMMER;
-		hitSound = Assets.Sounds.HIT_CRUSH;
-		hitSoundPitch = 1f;
+		image = ItemSpriteSheet.RANDUINS_OMEN;
 
 		tier = 5;
-		ACC = 1.20f; //20% boost to accuracy
 	}
 
 	@Override
 	public int max(int lvl) {
-		return  4*(tier+1) +    //24 base, down from 30
-				lvl*(tier+1);   //scaling unchanged
+		return  Math.round(2.5f*(tier+1)) +     //15 base, down from 30
+				lvl*(tier-2);                   //+3 per level, down from +6
 	}
 
+	@Override
+	public int defenseFactor( Char owner ) {
+		return 6+3*buffedLvl();    //6 extra defence, plus 3 per level;
+	}
+	
+	public String statsInfo(){
+		if (isIdentified()){
+			return Messages.get(this, "stats_desc", 6+3*buffedLvl());
+		} else {
+			return Messages.get(this, "typical_stats_desc", 6);
+		}
+	}
 }

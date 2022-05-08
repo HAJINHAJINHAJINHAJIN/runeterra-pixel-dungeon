@@ -24,22 +24,22 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Glaive extends MeleeWeapon {
+public class Vampiricscepter extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.GLAIVE;
-		hitSound = Assets.Sounds.HIT_SLASH;
-		hitSoundPitch = 0.8f;
+		image = ItemSpriteSheet.VAMPIRIC_SCEPTER;
+		hitSound = Assets.Sounds.HIT_STAB;
+		hitSoundPitch = 0.9f;
 
-		tier = 5;
+		tier = 2;
 		DLY = 1.5f; //0.67x speed
 		RCH = 2;    //extra reach
 	}
 
 	@Override
 	public int max(int lvl) {
-		return  Math.round(6.67f*(tier+1)) +    //40 base, up from 30
-				lvl*Math.round(1.33f*(tier+1)); //+8 per level, up from +6
+		return  Math.round(6.67f*(tier+1)) +    //20 base, up from 15
+				lvl*Math.round(1.33f*(tier+1)); //+4 per level, up from +3
 	}
 
 }

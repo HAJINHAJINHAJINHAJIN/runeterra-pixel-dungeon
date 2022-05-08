@@ -24,23 +24,21 @@ package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Gloves extends MeleeWeapon {
+public class Zeal extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.GLOVES;
-		hitSound = Assets.Sounds.HIT;
+		image = ItemSpriteSheet.ZEAL;
+		hitSound = Assets.Sounds.HIT_STAB;
 		hitSoundPitch = 1.3f;
 
-		tier = 1;
+		tier = 3;
 		DLY = 0.5f; //2x speed
-		
-		bones = false;
 	}
 
 	@Override
 	public int max(int lvl) {
-		return  Math.round(2.5f*(tier+1)) +     //5 base, down from 10
-				lvl*Math.round(0.5f*(tier+1));  //+1 per level, down from +2
+		return  Math.round(2.5f*(tier+1)) +     //10 base, down from 20
+				lvl*Math.round(0.5f*(tier+1));  //+2 per level, down from +4
 	}
 
 }

@@ -25,13 +25,15 @@ import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
 public class Longsword extends MeleeWeapon {
-	
+
 	{
 		image = ItemSpriteSheet.LONGSWORD;
 		hitSound = Assets.Sounds.HIT_SLASH;
-		hitSoundPitch = 1f;
+		hitSoundPitch = 1.1f;
 
-		tier = 4;
+		tier = 1;
+		
+		bones = false;
 	}
 
 }

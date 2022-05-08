@@ -23,9 +23,9 @@ package com.shatteredpixel.shatteredpixeldungeon.ui.changelist;
 
 import com.shatteredpixel.shatteredpixeldungeon.items.Stylus;
 import com.shatteredpixel.shatteredpixeldungeon.items.armor.PlateArmor;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Glaive;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.RunicBlade;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Bladeoftheruinedking;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Youmusghostblade;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Blackcleaver;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.ChangesScene;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSprite;
@@ -102,7 +102,7 @@ public class v0_4_X_Changes {
 				"_-_ Framerate improvements for older devices\n" +
 				"_-_ Game size reduced by ~10%"));
 		
-		changes.addButton( new ChangeButton(new ItemSprite(new Glaive()), "Balance Changes",
+		changes.addButton( new ChangeButton(new ItemSprite(new Bladeoftheruinedking()), "Balance Changes",
 				"_-_ Spear and Glaive damage reduced\n" +
 				"_-_ Runic blade damage reduced\n" +
 				"_-_ Grim enchant now procs more often\n" +
@@ -151,7 +151,7 @@ public class v0_4_X_Changes {
 				"_-_ Corrupted enemies live longer & no longer attack eachother\n" +
 				"_-_ Wands in the holster now charge faster"));
 		
-		changes.addButton( new ChangeButton(new ItemSprite(new RunicBlade()), "Item Changes pt.2",
+		changes.addButton( new ChangeButton(new ItemSprite(new Blackcleaver()), "Item Changes pt.2",
 				"Ring Balance Changes:\n" +
 				"_-_ Ring of Force weaker at 18+ strength, stronger otherwise\n" +
 				"_-_ Ring of Tenacity reduces more damage\n" +
@@ -199,7 +199,7 @@ public class v0_4_X_Changes {
 				"\n" +
 				"I also retooled curses to try and make them more about negative effects than negative stats. This meant the player had more flexibility when it came to trying gear out, as equipping a cursed item wasn't an almost certain game over."));
 		
-		changes.addButton( new ChangeButton(new ItemSprite(new Longsword()), "Equipment Overhaul!",
+		changes.addButton( new ChangeButton(new ItemSprite(new Youmusghostblade()), "Equipment Overhaul!",
 				"_-_ 13 new weapons, 12 rebalanced weapons\n" +
 				"\n" +
 				"Equipment Balance:\n" +

@@ -36,8 +36,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfMagicMissile;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfRegrowth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.SpiritBow;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Flail;
-import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Quarterstaff;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Guinsoosrageblade;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Rageknife;
 import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.ChangesScene;
 import com.shatteredpixel.shatteredpixeldungeon.scenes.PixelScene;
@@ -232,11 +232,11 @@ public class v0_8_X_Changes {
 		changes.hardlight(CharSprite.NEGATIVE);
 		changeInfos.add(changes);
 
-		changes.addButton(new ChangeButton(new Quarterstaff(),
+		changes.addButton(new ChangeButton(new Rageknife(),
 				"Along with the nerfs other defense-granting weapons got in v0.8.1, I'm also toning down the _Quarterstaff_ a bit:\n\n" +
 				"_-_ Quarterstaff blocking down to 0-2 from 0-3"));
 
-		changes.addButton(new ChangeButton(new Flail(),
+		changes.addButton(new ChangeButton(new Guinsoosrageblade(),
 				"The _Flail_ is currently performing a bit too well, so I'm deepening its accuracy downside a bit:\n\n" +
 				"_-_ Flail accuracy penalty up to 20% from 10%"));
 

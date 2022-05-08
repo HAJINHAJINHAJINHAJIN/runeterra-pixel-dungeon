@@ -21,34 +21,25 @@
 
 package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
 
-import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.Assets;
 import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
 
-public class Greatshield extends MeleeWeapon {
+public class Bladeoftheruinedking extends MeleeWeapon {
 
 	{
-		image = ItemSpriteSheet.GREATSHIELD;
+		image = ItemSpriteSheet.BLADE_OF_THE_RUINED_KING;
+		hitSound = Assets.Sounds.HIT_SLASH;
+		hitSoundPitch = 0.8f;
 
 		tier = 5;
+		DLY = 1.5f; //0.67x speed
+		RCH = 2;    //extra reach
 	}
 
 	@Override
 	public int max(int lvl) {
-		return  Math.round(2.5f*(tier+1)) +     //15 base, down from 30
-				lvl*(tier-2);                   //+3 per level, down from +6
+		return  Math.round(6.67f*(tier+1)) +    //40 base, up from 30
+				lvl*Math.round(1.33f*(tier+1)); //+8 per level, up from +6
 	}
 
-	@Override
-	public int defenseFactor( Char owner ) {
-		return 6+3*buffedLvl();    //6 extra defence, plus 3 per level;
-	}
-	
-	public String statsInfo(){
-		if (isIdentified()){
-			return Messages.get(this, "stats_desc", 6+3*buffedLvl());
-		} else {
-			return Messages.get(this, "typical_stats_desc", 6);
-		}
-	}
 }
