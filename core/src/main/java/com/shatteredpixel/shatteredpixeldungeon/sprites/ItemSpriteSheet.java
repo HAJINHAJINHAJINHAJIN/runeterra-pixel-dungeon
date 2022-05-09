@@ -220,7 +220,7 @@ public class ItemSpriteSheet {
 	public static final int RAGEKNIFE    = WEP_TIER2+3;
 	public static final int KIRCHEIS_SHARD            = WEP_TIER2+4;
 	static{
-		assignItemRect(PICKAXE,      13, 13);
+		assignItemRect(PICKAXE1,      13, 13);
 		assignItemRect(SERRATED_DIRK,        12, 14);
 		assignItemRect(VAMPIRIC_SCEPTER,           16, 16);
 		assignItemRect(RAGEKNIFE,    16, 16);

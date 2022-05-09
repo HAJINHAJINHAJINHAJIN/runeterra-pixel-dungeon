@@ -31,18 +31,15 @@ public class Rageknife extends MeleeWeapon {
 		image = ItemSpriteSheet.RAGEKNIFE;
 		hitSound = Assets.Sounds.HIT_CRUSH;
 		hitSoundPitch = 1f;
+		DLY = 0.8f; // 1.25x speed
 
 		tier = 2;
 	}
 
 	@Override
 	public int max(int lvl) {
-		return  4*(tier+1) +    //12 base, down from 15
+		return  4*(tier+1) - 2 +    //10 base, down from 15
 				lvl*(tier+1);   //scaling unchanged
 	}
 
-	@Override
-	public int defenseFactor( Char owner ) {
-		return 2;	//2 extra defence
-	}
 }

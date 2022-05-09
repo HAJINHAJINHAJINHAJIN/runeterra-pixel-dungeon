@@ -110,6 +110,8 @@ import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfPrismaticLight
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfRegrowth;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfTransfusion;
 import com.shatteredpixel.shatteredpixeldungeon.items.wands.WandOfWarding;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Ironspikewhip;
+import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Longsword;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Manamune;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Statikkshiv;
 import com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee.Crossbow;
@@ -347,7 +349,7 @@ public class Generator {
 			
 			WEP_T3.classes = new Class<?>[]{
 					BFsword.class,
-					Mace.class,
+					Ironspikewhip.class,
 					Phage.class,
 					Aegisofthelegion.class,
 					Zeal.class,

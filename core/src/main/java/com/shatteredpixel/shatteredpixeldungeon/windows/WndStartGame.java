@@ -314,7 +314,7 @@ public class WndStartGame extends Window {
 					switch(cl){
 						case WARRIOR:
 							heroItem.icon(new ItemSprite(ItemSpriteSheet.SEAL, null));
-							heroLoadout.icon(new ItemSprite(ItemSpriteSheet.WORN_SHORTSWORD, null));
+							heroLoadout.icon(new ItemSprite(ItemSpriteSheet.LONGSWORD, null));
 							heroMisc.icon(new ItemSprite(ItemSpriteSheet.RATION, null));
 							break;
 						case MAGE:
@@ -329,7 +329,7 @@ public class WndStartGame extends Window {
 							break;
 						case HUNTRESS:
 							heroItem.icon(new ItemSprite(ItemSpriteSheet.SPIRIT_BOW, null));
-							heroLoadout.icon(new ItemSprite(ItemSpriteSheet.GLOVES, null));
+							heroLoadout.icon(new ItemSprite(ItemSpriteSheet.DAGGER, null));
 							heroMisc.icon(new Image(Assets.Environment.TILES_SEWERS, 112, 96, 16, 16 ));
 							break;
 					}

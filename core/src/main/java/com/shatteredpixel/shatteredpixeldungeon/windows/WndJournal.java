@@ -323,7 +323,7 @@ public class WndJournal extends WndTabbed {
 				case Document.GUIDE_SEARCHING:
 					return Icons.get(Icons.MAGNIFY);
 				case "Strength":
-					return new ItemSprite( ItemSpriteSheet.GREATAXE );
+					return new ItemSprite( ItemSpriteSheet.MURAMANA );
 				case "Upgrades":
 					return new ItemSprite( ItemSpriteSheet.RING_EMERALD );
 				case "Looting":

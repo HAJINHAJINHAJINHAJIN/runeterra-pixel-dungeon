@@ -163,7 +163,7 @@ public class WndHeroInfo extends WndTabbed {
 			switch (cls){
 				case WARRIOR: default:
 					icons = new Image[]{ new ItemSprite(ItemSpriteSheet.SEAL),
-							new ItemSprite(ItemSpriteSheet.WORN_SHORTSWORD),
+							new ItemSprite(ItemSpriteSheet.LONGSWORD),
 							new ItemSprite(ItemSpriteSheet.SCROLL_ISAZ)};
 					break;
 				case MAGE:
@@ -180,7 +180,7 @@ public class WndHeroInfo extends WndTabbed {
 				case HUNTRESS:
 					icons = new Image[]{ new ItemSprite(ItemSpriteSheet.SPIRIT_BOW),
 							new Image(Assets.Environment.TILES_SEWERS, 112, 96, 16, 16),
-							new ItemSprite(ItemSpriteSheet.GLOVES),
+							new ItemSprite(ItemSpriteSheet.DAGGER),
 							new ItemSprite(ItemSpriteSheet.SCROLL_ISAZ)};
 					break;
 			}

@@ -565,7 +565,7 @@ public class v0_7_X_Changes {
 				"_-_ special wealth drops have a 1/10 chance to award a high value item\n" +
 				"_-_ Wraiths and minion enemies no longer have a chance to generate wealth items"));
 		
-		changes.addButton( new ChangeButton(new ItemSprite(ItemSpriteSheet.SPEAR, new ItemSprite.Glowing(0x00FFFF)), "Buffed Enchants",
+		changes.addButton( new ChangeButton(new ItemSprite(ItemSpriteSheet.VAMPIRIC_SCEPTER, new ItemSprite.Glowing(0x00FFFF)), "Buffed Enchants",
 				"_-_ Chilling now stacks with itself over multiple procs\n\n" +
 				"_-_ Lucky buffed/reworked. No longer affects damage, now generates bonus items when enemies are killed with a lucky weapon."));
 		
@@ -587,7 +587,7 @@ public class v0_7_X_Changes {
 		changes.hardlight( CharSprite.NEGATIVE );
 		changeInfos.add(changes);
 		
-		changes.addButton( new ChangeButton(new ItemSprite(ItemSpriteSheet.DIRK, new ItemSprite.Glowing(0xFF4400)), "Nerfed Enchants",
+		changes.addButton( new ChangeButton(new ItemSprite(ItemSpriteSheet.KIRCHEIS_SHARD, new ItemSprite.Glowing(0xFF4400)), "Nerfed Enchants",
 				"_-_ Blazing no longer deals direct damage, now instead is more likely to set enemies on fire.\n\n" +
 				"_-_ Shocking no longer deals damage to enemy being attacked, deals more damage to surrounding enemies.\n\n" +
 				"_-_ Vampiric now grants less health when hero is at higher HP.\n\n" +
