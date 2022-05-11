@@ -19,36 +19,39 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>
  */
 
-package com.shatteredpixel.shatteredpixeldungeon.items.weapon.melee;
+package com.shatteredpixel.shatteredpixeldungeon.actors.buffs;
 
-import com.shatteredpixel.shatteredpixeldungeon.Assets;
-import com.shatteredpixel.shatteredpixeldungeon.actors.Char;
-import com.shatteredpixel.shatteredpixeldungeon.sprites.ItemSpriteSheet;
+import com.shatteredpixel.shatteredpixeldungeon.messages.Messages;
+import com.shatteredpixel.shatteredpixeldungeon.ui.BuffIndicator;
 
-public class Vampiricscepter extends MeleeWeapon {
+public class Wraithstep extends FlavourBuff {
 
-	{
-		image = ItemSpriteSheet.VAMPIRIC_SCEPTER;
-		hitSound = Assets.Sounds.HIT_STAB;
-		hitSoundPitch = 0.9f;
+    {
+        type = buffType.POSITIVE;
 
-		tier = 2;
-	}
+        announced = true;
+    }
 
-	@Override
-	public int proc(Char attacker, Char defender, int damage) {
+    public static final float DURATION	= 4f;
 
-		if (!defender.isAlive()) {
-			attacker.HP += 1;
-		}
+    @Override
+    public int icon() {
+        return BuffIndicator.AMOK;
+    }
 
-		return super.proc(attacker, defender, damage);
-	}
+    @Override
+    public float iconFadePercent() {
+        return Math.max(0, (DURATION - visualcooldown()) / DURATION);
+    }
 
-	@Override
-	public int max(int lvl) {
-		return  4*(tier+1) +    //12 base, down from 15
-				lvl*(tier+1);
-	}
+    @Override
+    public String toString() {
+        return Messages.get(this, "name");
+    }
+
+    @Override
+    public String desc() {
+        return Messages.get(this, "desc", dispTurns());
+    }
 
 }

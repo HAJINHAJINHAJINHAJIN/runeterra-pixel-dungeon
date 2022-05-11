@@ -32,7 +32,7 @@ public class LostInventory extends Buff {
 
 	@Override
 	public int icon() {
-		return BuffIndicator.NOINV;
+		return BuffIndicator.WRAITHSTEP;
 	}
 
 	@Override

@@ -36,6 +36,12 @@ public class Serrateddirk extends MeleeWeapon {
 	}
 
 	@Override
+	public int min(int lvl) {
+		return  tier + 3 + //base + 3
+				lvl;    //level scaling
+	}
+
+	@Override
 	public int max(int lvl) {
 		return  4*(tier+1) +    //12 base, down from 15
 				lvl*(tier+1);   //scaling unchanged
